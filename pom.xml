@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<!--[0] - Aquí puedes adaptar la versión de Spring Boot.-->
+		<version>2.7.12</version>
+		<relativePath/>  
+	</parent>
+	<groupId>es.dsw</groupId> 
+	<artifactId>SpringBootProyectDemo1</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>SpringBootProyectDemo1</name>
+	<description>Demostración proyecto web básico.</description>
+	<properties>
+		<!--[1] - Aquí puedes adaptar el JDK que utilizas para el proyecto.-->
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+		<!--[2] - Conjunto de dependencias añadidas desde https://start.spring.io/ a la hora de crear el proyecto.-->
+		<dependency> 
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!--[3] - Dependencia necesaria para que spring boot interprete y ejecute las vistas en .jsp.
+		          Recuerda tener presente el sitio https://mvnrepository.com/ a la hora de buscar nuevas dependencias.
+		          Recomendación: Después de modificar el pom.xml, actualice el proyecto haciendo clic derecho
+		          sobre el proyecto y a continuación seleccionando Maven -> Update Project
+		-->
+		<dependency>
+    		<groupId>org.apache.tomcat.embed</groupId>
+    		<artifactId>tomcat-embed-jasper</artifactId>
+    		<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+		<!--[4] - Se indica el nombre del fichero .war que se generará cuando se vaya a crear para desplegar con un servidor como apache tomcat. Para generar el .war,
+		          debe hacer click derecho sobre el proyecto y luego Run as -> Maven Install. El fichero se creará dentro de la carpeta target del proyecto
+		-->
+		<finalName>SpringBootProyectDemo1</finalName>
+	</build>
+
+</project>
