@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<!--[0] - Aquí puedes adaptar la versión de Spring Boot.-->
-		<version>2.7.12</version>
+		<version>3.3.4</version>
 		<relativePath/>  
 	</parent>
 	<groupId>es.dsw</groupId> 
